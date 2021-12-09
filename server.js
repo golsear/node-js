@@ -1,18 +1,11 @@
-function User(name) {
-    this.name = name;
+var user = require('./user');
+// require('./user'); // global
 
-    this.iam = function () {
-        console.log('I am, ' + this.name);
-    } 
+var ralph = new user.User('Ralph');
+var alex = new user.User('Alex');
 
-}
-
-User.prototype.hello = function (who) {
-    console.log('Hello, ' + who.name);
-}
-
-var ralph = new User('Ralph');
-var alex = new User('Alex');
+// var ralph = new User('Ralph'); // global
+// var alex = new User('Alex'); // global
 
 alex.hello(ralph);
 alex.iam();
