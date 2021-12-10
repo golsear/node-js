@@ -1,3 +1,4 @@
+// module.exports = exports = this
 // exports
 // global
 
@@ -16,7 +17,7 @@ User.prototype.hello = function (who) {
     console.log(phrases.Hello + ', ' + who.name);
 }
 
-console.log('user.js is required!');
-
-exports.User = User;
+module.exports = User;
+// exports.User = User;
 // global.User = User;
+
