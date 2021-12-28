@@ -2,7 +2,7 @@
 // exports
 // global
 
-var phrases = require('./ua');
+var db = require('db');
 
 function User(name) {
     this.name = name;
@@ -14,10 +14,11 @@ function User(name) {
 }
 
 User.prototype.hello = function (who) {
-    console.log(phrases.Hello + ', ' + who.name);
+    console.log(db.getPhrase("Hello") + ", " + who.name);
 }
 
 module.exports = User;
 // exports.User = User;
 // global.User = User;
+
 
